@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMLR4 - CSV to Excel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-ZR1m1G2kVaJYQt4Zs9zVnDKx/7eKQ8yEU6PoS+POaF31jLQOwTR9zRMn0NUQpjz6Z9zK3NBkVo+JcA7cFZP9Zg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>IMLR4</h1>
+            <p class="tagline">CSV to Excel Converter</p>
+        </div>
+    </header>
+
+    <main class="main-section">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="csv_file">Upload your CSV file:</label>
+            <input type="file" id="csv_file" name="csv_file" accept=".csv" required>
+            <button type="submit"><i class="fas fa-file-excel"></i> Convert to Excel</button>
+        </form>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I’m Lourdu Raju, an ML Engineer passionate about creating simple, impactful web tools using Python and Flask. I focus on building efficient solutions tailored for data scientists and machine learning engineers — from data transformation utilities to deployable ML pipeline interfaces.</p>
+            <div class="social-links">
+                <a href="https://github.com/Lourdhu02" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lourdhu" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:lourdu@spacedrift.co"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IMLR4. All rights reserved.</p>
+    </footer>
+</body>
+</html>

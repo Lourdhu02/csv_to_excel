@@ -1,0 +1,148 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background-color: #E8F1F2;
+    color: #2E3A59;
+    animation: fadeIn 0.8s ease-in;
+}
+
+header {
+    background-color: #2E3A59;
+    color: #E8F1F2;
+   
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.brand{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+header .tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 8px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.main-section {
+    align-items: center;
+    align-content: center;
+    margin: 40px auto;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+form{
+    width: 55%;
+}
+.upload-form {
+  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-form label {
+    font-weight: 600;
+}
+
+.upload-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #4F6D7A;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.upload-form button {
+    padding: 12px;
+    background-color: #4F6D7A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-form button:hover {
+    background-color: #2E3A59;
+}
+
+.alert {
+    background-color: #fff3cd;
+    border-left: 6px solid #ffcc00;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    animation: slideIn 0.5s ease;
+}
+
+.about {
+    margin-top: 40px;
+    max-width: 30%;
+    text-align: left;
+}
+
+.about h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 0.95rem;
+    color: #4F6D7A;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #2E3A59;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4F6D7A;
+}
+
+footer {
+    bottom: 0%;
+    max-width: 100%;
+    background-color: #2E3A59;
+    color: #E8F1F2;
+    text-align: center;
+    padding: 15px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
